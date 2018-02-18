@@ -1,0 +1,8 @@
+{% macro age(dob) %}
+{% set age = (dob.today().year - dob.year) %}
+{% if age > 30 %}
+ Tienes más de 30 años
+{% else %} 
+Chao
+{% endif %}
+{% endmacro %}

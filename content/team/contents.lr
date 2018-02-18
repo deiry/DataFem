@@ -1,0 +1,10 @@
+_model: page
+---
+title: Team
+---
+body:
+
+#Titulo 1
+##Titulo 2
+---
+_template: members.html
