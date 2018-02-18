@@ -1,18 +1,15 @@
 language: python
 
- python: 2.7
+python: 2.7
 
- install:
+install:
+# Lektor build dependencies
+- pip install lektor
 
- #Lecktor build dependencies
+script: 
+- lektor build # Construir todos los archivos estatios
 
- - pip install lektor
-
- script: 
- - lektor build #Construir todos los archivos estatios
-
- #Si todo esta bien se pasa variables de ambiente que nosotros suministramos
- deploy:
-
+# Si todo esta bien se pasa variables de ambiente que nosotros suministramos
+deploy:
     provider: script
     script: "lektor deploy --username $GITHUB_USER --password $GITHUB_PASS"
